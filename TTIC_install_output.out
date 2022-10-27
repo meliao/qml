@@ -1,0 +1,898 @@
+pip install git+https://github.com/qmlcode/qml@develop --user -U
+Collecting git+https://github.com/qmlcode/qml@develop
+  Cloning https://github.com/qmlcode/qml (to revision develop) to /tmp/pip-req-build-mmptkev3
+  Running command git clone --quiet https://github.com/qmlcode/qml /tmp/pip-req-build-mmptkev3
+  Running command git checkout -b develop --track origin/develop
+  Switched to a new branch 'develop'
+  Branch develop set up to track remote branch develop from origin.
+  Resolved https://github.com/qmlcode/qml to commit a7921c9176b9498dcce096efad0883271706d633
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: numpy>=1.13 in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from qml==0.4.0.12) (1.23.4)
+Requirement already satisfied: scipy in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from qml==0.4.0.12) (1.9.3)
+Requirement already satisfied: scikit-learn in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from qml==0.4.0.12) (1.1.3)
+Requirement already satisfied: six in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from qml==0.4.0.12) (1.16.0)
+Requirement already satisfied: joblib>=1.0.0 in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from scikit-learn->qml==0.4.0.12) (1.2.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages (from scikit-learn->qml==0.4.0.12) (3.1.0)
+Building wheels for collected packages: qml
+  Building wheel for qml (setup.py) ... error
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [401 lines of output]
+      /tmp/pip-req-build-mmptkev3/setup.py:2: DeprecationWarning:
+      
+        `numpy.distutils` is deprecated since NumPy 1.23.0, as a result
+        of the deprecation of `distutils` itself. It will be removed for
+        Python >= 3.12. For older Python versions it will remain present.
+        It is recommended to use `setuptools < 60.0` for those Python versions.
+        For more details, see:
+          https://numpy.org/devdocs/reference/distutils_status_migration.html
+      
+      
+        from numpy.distutils.core import Extension, setup
+      MKL-discover: MKLROOT was not set
+      running bdist_wheel
+      running build
+      running config_cc
+      INFO: unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+      running config_fc
+      INFO: unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+      running build_src
+      INFO: build_src
+      INFO: building extension ".fchl.ffchl_module" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/fchl/ffchl_module-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/fchl/ffchl_module-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fkernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fkernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fkernels-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fgradient_kernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fgradient_kernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fgradient_kernels-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.frepresentations" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/frepresentations-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/frepresentations-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.fslatm" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/fslatm-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/fslatm-f2pywrappers2.f90' to sources.
+      INFO: building extension ".math.fsolvers" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/math/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/math' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/math/fsolvers-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/math/fsolvers-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.facsf" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/facsf-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/facsf-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fdistance" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fdistance-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fdistance-f2pywrappers2.f90' to sources.
+      INFO: building extension ".arad.farad_kernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/arad/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/arad' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/arad/farad_kernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/arad/farad_kernels-f2pywrappers2.f90' to sources.
+      INFO: build_src: building npy-pkg config files
+      /scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+        warnings.warn(
+      running build_py
+      creating build/lib.linux-x86_64-cpython-310
+      creating build/lib.linux-x86_64-cpython-310/qml
+      copying qml/__init__.py -> build/lib.linux-x86_64-cpython-310/qml
+      creating build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/aglaia.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/graceful_killer.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/np_symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/placeholder.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/tensormol_symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/tf_utils.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      creating build/lib.linux-x86_64-cpython-310/qml/arad
+      copying qml/arad/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/arad
+      copying qml/arad/arad.py -> build/lib.linux-x86_64-cpython-310/qml/arad
+      creating build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_electric_field_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_force_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_kernel_functions.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_representations.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_scalar_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      creating build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/distance.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/gradient_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/kernels.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/wrappers.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      creating build/lib.linux-x86_64-cpython-310/qml/math
+      copying qml/math/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/math
+      copying qml/math/math.py -> build/lib.linux-x86_64-cpython-310/qml/math
+      creating build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/representations.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/slatm.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      creating build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/data.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/kernels.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/models.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/preprocessing.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/representations.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      creating build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/alchemy.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/compound.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/utils.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      creating build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/kernelridge.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/mlmodel.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      running build_ext
+      INFO: customize UnixCCompiler
+      INFO: customize UnixCCompiler using build_ext
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-march=native)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      creating /tmp/tmp3g_vh3wz/mnt
+      creating /tmp/tmp3g_vh3wz/mnt/scratch
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils
+      creating /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-march=native'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-O3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-O3'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-Werror)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-Werror'
+      INFO: CCompilerOpt.__init__[1782] : check requested baseline
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse2'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE2' with flags (-msse -msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE' with flags (-msse -msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse3'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE3' with flags (-msse -msse2 -msse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -Werror'
+      INFO: CCompilerOpt.__init__[1791] : check requested dispatch-able features
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mssse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mssse3'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse4.1)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse4.1'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mpopcnt)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mpopcnt'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse4.2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse4.2'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE42' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mf16c)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mf16c'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx2'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX2' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mavx2 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSSE3' with flags (-msse -msse2 -msse3 -mssse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mfma)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mfma'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'FMA3' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512f -mno-mmx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512f -mno-mmx'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512f -mno-mmx) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512f’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX512F' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c -o /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.o -MMD -MF /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.o.d -msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror) failed with exit status 1 output ->
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c: In function ‘main’:
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: unknown type name ‘__m512i’
+           __m512i a = _mm512_abs_epi32(_mm512_loadu_si512((const __m512i*)argv[argc-1]));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: implicit declaration of function ‘_mm512_abs_epi32’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: implicit declaration of function ‘_mm512_loadu_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: unknown type name ‘__m512i’
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:19:5: error: implicit declaration of function ‘_mm512_castsi512_si128’ [-Werror=implicit-function-declaration]
+           return _mm_cvtsi128_si32(_mm512_castsi512_si128(a));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:19:5: error: incompatible type for argument 1 of ‘_mm_cvtsi128_si32’
+      In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:1246:0,
+                       from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:32,
+                       from /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:14:
+      /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:205:1: note: expected ‘__m128i’ but argument is of type ‘int’
+       _mm_cvtsi128_si32 (__m128i __A)
+       ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:20:1: error: control reaches end of non-void function [-Werror=return-type]
+       }
+       ^
+      cc1: all warnings being treated as errors
+      
+      WARN: CCompilerOpt.feature_test[1563] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'POPCNT' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE41' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'F16C' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512cd)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512cd'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512cd) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512cd’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX512CD' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c -o /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.o -MMD -MF /tmp/tmp3g_vh3wz/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.o.d -msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror) failed with exit status 1 output ->
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c: In function ‘main’:
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: unknown type name ‘__m512i’
+           __m512i a = _mm512_lzcnt_epi32(_mm512_loadu_si512((const __m512i*)argv[argc-1]));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: implicit declaration of function ‘_mm512_lzcnt_epi32’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: implicit declaration of function ‘_mm512_loadu_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: unknown type name ‘__m512i’
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:19:5: error: implicit declaration of function ‘_mm512_castsi512_si128’ [-Werror=implicit-function-declaration]
+           return _mm_cvtsi128_si32(_mm512_castsi512_si128(a));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:19:5: error: incompatible type for argument 1 of ‘_mm_cvtsi128_si32’
+      In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:1246:0,
+                       from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:32,
+                       from /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:14:
+      /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:205:1: note: expected ‘__m128i’ but argument is of type ‘int’
+       _mm_cvtsi128_si32 (__m128i __A)
+       ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:20:1: error: control reaches end of non-void function [-Werror=return-type]
+       }
+       ^
+      cc1: all warnings being treated as errors
+      
+      WARN: CCompilerOpt.feature_test[1563] : testing failed
+      INFO: CCompilerOpt.__init__[1803] : skip features (SSE SSE3 SSE2) since its part of baseline
+      INFO: CCompilerOpt.__init__[1807] : initialize targets groups
+      INFO: CCompilerOpt.__init__[1809] : parse target group simd_test
+      INFO: CCompilerOpt._parse_target_tokens[2020] : skip targets (VSX2 VX VXE2 VXE VSX4 VSX3 NEON FMA4 ASIMD AVX512F VSX XOP AVX512_SKX) not part of baseline or dispatch-able features
+      INFO: CCompilerOpt._parse_policy_not_keepbase[2132] : skip baseline features (SSE2)
+      INFO: CCompilerOpt.generate_dispatch_header[2353] : generate CPU dispatch header: (build/src.linux-x86_64-3.10/numpy/distutils/include/npy_cpu_dispatch_config.h)
+      WARN: CCompilerOpt.generate_dispatch_header[2362] : dispatch header dir build/src.linux-x86_64-3.10/numpy/distutils/include does not exist, creating it
+      INFO: get_default_fcompiler: matching types: '['arm', 'gnu95', 'intel', 'lahey', 'pg', 'nv', 'absoft', 'nag', 'vast', 'compaq', 'intele', 'intelem', 'gnu', 'g95', 'pathf95', 'nagfor', 'fujitsu']'
+      INFO: customize ArmFlangCompiler
+      WARN: Could not locate executable armflang
+      INFO: customize Gnu95FCompiler
+      INFO: Found executable /usr/bin/gfortran
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler using build_ext
+      INFO: get_default_fcompiler: matching types: '['arm', 'gnu95', 'intel', 'lahey', 'pg', 'nv', 'absoft', 'nag', 'vast', 'compaq', 'intele', 'intelem', 'gnu', 'g95', 'pathf95', 'nagfor', 'fujitsu']'
+      INFO: customize ArmFlangCompiler
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler using build_ext
+      INFO: building '.fchl.ffchl_module' extension
+      INFO: compiling C sources
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      creating build/temp.linux-x86_64-cpython-310/build
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/fchl
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl
+      INFO: compile options: '-Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl -I/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-O3 -fopenmp -m64 -march=native -fPIC -Wno-maybe-uninitialized -Wno-unused-function -Wno-cpp -msse -msse2 -msse3'
+      INFO: gcc: build/src.linux-x86_64-3.10/fchl/ffchl_modulemodule.cINFO: gcc: build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c
+      
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c: In function ‘find_first_negative_dimension’:
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c:707:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+           for (int i = 0; i < rank; ++i) {
+           ^
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c:707:5: note: use option -std=c99 or -std=gnu99 to compile your code
+      error: Command "gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl -I/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c -o build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.o -MMD -MF build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.o.d -O3 -fopenmp -m64 -march=native -fPIC -Wno-maybe-uninitialized -Wno-unused-function -Wno-cpp -msse -msse2 -msse3" failed with exit status 1
+      INFO:
+      ########### EXT COMPILER OPTIMIZATION ###########
+      INFO: Platform      :
+        Architecture: x64
+        Compiler    : gcc
+      
+      CPU baseline  :
+        Requested   : 'min'
+        Enabled     : SSE SSE2 SSE3
+        Flags       : -msse -msse2 -msse3
+        Extra checks: none
+      
+      CPU dispatch  :
+        Requested   : 'max -xop -fma4'
+        Enabled     : SSSE3 SSE41 POPCNT SSE42 AVX F16C FMA3 AVX2
+        Generated   : none
+      INFO: CCompilerOpt.cache_flush[857] : write cache to path -> /tmp/pip-req-build-mmptkev3/build/temp.linux-x86_64-cpython-310/ccompiler_opt_cache_ext.py
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for qml
+  Running setup.py clean for qml
+Failed to build qml
+Installing collected packages: qml
+  Running setup.py install for qml ... error
+  error: subprocess-exited-with-error
+  
+  × Running setup.py install for qml did not run successfully.
+  │ exit code: 1
+  ╰─> [452 lines of output]
+      /tmp/pip-req-build-mmptkev3/setup.py:2: DeprecationWarning:
+      
+        `numpy.distutils` is deprecated since NumPy 1.23.0, as a result
+        of the deprecation of `distutils` itself. It will be removed for
+        Python >= 3.12. For older Python versions it will remain present.
+        It is recommended to use `setuptools < 60.0` for those Python versions.
+        For more details, see:
+          https://numpy.org/devdocs/reference/distutils_status_migration.html
+      
+      
+        from numpy.distutils.core import Extension, setup
+      MKL-discover: MKLROOT was not set
+      running install
+      /scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+        warnings.warn(
+      running build
+      running config_cc
+      INFO: unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+      running config_fc
+      INFO: unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+      running build_src
+      INFO: build_src
+      INFO: building extension ".fchl.ffchl_module" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/fchl/ffchl_module-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/fchl/ffchl_module-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fkernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fkernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fkernels-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fgradient_kernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fgradient_kernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fgradient_kernels-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.frepresentations" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/frepresentations-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/frepresentations-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.fslatm" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/fslatm-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/fslatm-f2pywrappers2.f90' to sources.
+      INFO: building extension ".math.fsolvers" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/math/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/math' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/math/fsolvers-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/math/fsolvers-f2pywrappers2.f90' to sources.
+      INFO: building extension ".representations.facsf" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/representations' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/facsf-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/representations/facsf-f2pywrappers2.f90' to sources.
+      INFO: building extension ".kernels.fdistance" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/kernels' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fdistance-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/kernels/fdistance-f2pywrappers2.f90' to sources.
+      INFO: building extension ".arad.farad_kernels" sources
+      INFO: f2py options: ['--quiet']
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/arad/fortranobject.c' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/arad' to include_dirs.
+      INFO:   adding 'build/src.linux-x86_64-3.10/arad/farad_kernels-f2pywrappers.f' to sources.
+      INFO:   adding 'build/src.linux-x86_64-3.10/arad/farad_kernels-f2pywrappers2.f90' to sources.
+      INFO: build_src: building npy-pkg config files
+      running build_py
+      creating build/lib.linux-x86_64-cpython-310
+      creating build/lib.linux-x86_64-cpython-310/qml
+      copying qml/__init__.py -> build/lib.linux-x86_64-cpython-310/qml
+      creating build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/aglaia.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/graceful_killer.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/np_symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/placeholder.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/tensormol_symm_funct.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      copying qml/aglaia/tf_utils.py -> build/lib.linux-x86_64-cpython-310/qml/aglaia
+      creating build/lib.linux-x86_64-cpython-310/qml/arad
+      copying qml/arad/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/arad
+      copying qml/arad/arad.py -> build/lib.linux-x86_64-cpython-310/qml/arad
+      creating build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_electric_field_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_force_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_kernel_functions.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_representations.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      copying qml/fchl/fchl_scalar_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/fchl
+      creating build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/distance.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/gradient_kernels.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/kernels.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      copying qml/kernels/wrappers.py -> build/lib.linux-x86_64-cpython-310/qml/kernels
+      creating build/lib.linux-x86_64-cpython-310/qml/math
+      copying qml/math/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/math
+      copying qml/math/math.py -> build/lib.linux-x86_64-cpython-310/qml/math
+      creating build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/representations.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      copying qml/representations/slatm.py -> build/lib.linux-x86_64-cpython-310/qml/representations
+      creating build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/data.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/kernels.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/models.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/preprocessing.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      copying qml/qmlearn/representations.py -> build/lib.linux-x86_64-cpython-310/qml/qmlearn
+      creating build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/alchemy.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/compound.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      copying qml/utils/utils.py -> build/lib.linux-x86_64-cpython-310/qml/utils
+      creating build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/__init__.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/kernelridge.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      copying qml/models/mlmodel.py -> build/lib.linux-x86_64-cpython-310/qml/models
+      running build_ext
+      INFO: customize UnixCCompiler
+      INFO: customize UnixCCompiler using build_ext
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-march=native)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      creating /tmp/tmpzilc53rt/mnt
+      creating /tmp/tmpzilc53rt/mnt/scratch
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils
+      creating /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-march=native'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-O3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-O3'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-Werror)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-Werror'
+      INFO: CCompilerOpt.__init__[1782] : check requested baseline
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse2'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE2' with flags (-msse -msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE' with flags (-msse -msse2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse3'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE3' with flags (-msse -msse2 -msse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -Werror'
+      INFO: CCompilerOpt.__init__[1791] : check requested dispatch-able features
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mssse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mssse3'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse4.1)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse4.1'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE41' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSSE3' with flags (-msse -msse2 -msse3 -mssse3)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mpopcnt)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mpopcnt'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'POPCNT' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-msse4.2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse4.2'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'SSE42' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mf16c)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mf16c'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'F16C' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mfma)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mfma'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx2'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512f -mno-mmx)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512f -mno-mmx'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512f -mno-mmx) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512f’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512cd)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512cd'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512cd) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512cd’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX512CD' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.o.d -msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror) failed with exit status 1 output ->
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c: In function ‘main’:
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: unknown type name ‘__m512i’
+           __m512i a = _mm512_lzcnt_epi32(_mm512_loadu_si512((const __m512i*)argv[argc-1]));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: implicit declaration of function ‘_mm512_lzcnt_epi32’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: implicit declaration of function ‘_mm512_loadu_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:18:5: error: unknown type name ‘__m512i’
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:19:5: error: implicit declaration of function ‘_mm512_castsi512_si128’ [-Werror=implicit-function-declaration]
+           return _mm_cvtsi128_si32(_mm512_castsi512_si128(a));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:19:5: error: incompatible type for argument 1 of ‘_mm_cvtsi128_si32’
+      In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:1246:0,
+                       from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:32,
+                       from /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:14:
+      /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:205:1: note: expected ‘__m128i’ but argument is of type ‘int’
+       _mm_cvtsi128_si32 (__m128i __A)
+       ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512cd.c:20:1: error: control reaches end of non-void function [-Werror=return-type]
+       }
+       ^
+      cc1: all warnings being treated as errors
+      
+      WARN: CCompilerOpt.feature_test[1563] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX2' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mavx2 -Werror'
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX512F' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.o.d -msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror) failed with exit status 1 output ->
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c: In function ‘main’:
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: unknown type name ‘__m512i’
+           __m512i a = _mm512_abs_epi32(_mm512_loadu_si512((const __m512i*)argv[argc-1]));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: implicit declaration of function ‘_mm512_abs_epi32’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: implicit declaration of function ‘_mm512_loadu_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:18:5: error: unknown type name ‘__m512i’
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:19:5: error: implicit declaration of function ‘_mm512_castsi512_si128’ [-Werror=implicit-function-declaration]
+           return _mm_cvtsi128_si32(_mm512_castsi512_si128(a));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:19:5: error: incompatible type for argument 1 of ‘_mm_cvtsi128_si32’
+      In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:1246:0,
+                       from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:32,
+                       from /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:14:
+      /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:205:1: note: expected ‘__m128i’ but argument is of type ‘int’
+       _mm_cvtsi128_si32 (__m128i __A)
+       ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512f.c:20:1: error: control reaches end of non-void function [-Werror=return-type]
+       }
+       ^
+      cc1: all warnings being treated as errors
+      
+      WARN: CCompilerOpt.feature_test[1563] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'FMA3' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -Werror'
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512vl -mavx512bw -mavx512dq)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512vl -mavx512bw -mavx512dq'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512vl -mavx512bw -mavx512dq) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512vl’
+      gcc: error: unrecognized command line option ‘-mavx512bw’
+      gcc: error: unrecognized command line option ‘-mavx512dq’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.cc_test_flags[1073] : testing flags (-mavx512vnni)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-mavx512vnni'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/test_flags.o.d -mavx512vnni) failed with exit status 1 output ->
+      gcc: error: unrecognized command line option ‘-mavx512vnni’
+      
+      WARN: CCompilerOpt.cc_test_flags[1077] : testing failed
+      INFO: CCompilerOpt.feature_test[1547] : testing feature 'AVX512_CLX' with flags (-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2)
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      INFO: compile options: '-I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror'
+      WARN: CCompilerOpt.dist_test[630] : CCompilerOpt._dist_test_spawn[764] : Command (gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c -o /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.o -MMD -MF /tmp/tmpzilc53rt/mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.o.d -msse -msse2 -msse3 -mssse3 -msse4.1 -mpopcnt -msse4.2 -mavx -mf16c -mfma -mavx2 -Werror) failed with exit status 1 output ->
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c: In function ‘main’:
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:19:5: error: unknown type name ‘__m512i’
+           __m512i a = _mm512_loadu_si512((const __m512i*)argv[argc-1]);
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:19:5: error: implicit declaration of function ‘_mm512_loadu_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:19:5: error: unknown type name ‘__m512i’
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:20:13: error: implicit declaration of function ‘_mm512_dpbusd_epi32’ [-Werror=implicit-function-declaration]
+                   a = _mm512_dpbusd_epi32(a, _mm512_setzero_si512(), a);
+                   ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:20:13: error: implicit declaration of function ‘_mm512_setzero_si512’ [-Werror=implicit-function-declaration]
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:21:5: error: implicit declaration of function ‘_mm512_castsi512_si128’ [-Werror=implicit-function-declaration]
+           return _mm_cvtsi128_si32(_mm512_castsi512_si128(a));
+           ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:21:5: error: incompatible type for argument 1 of ‘_mm_cvtsi128_si32’
+      In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:1246:0,
+                       from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:32,
+                       from /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:14:
+      /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:205:1: note: expected ‘__m128i’ but argument is of type ‘int’
+       _mm_cvtsi128_si32 (__m128i __A)
+       ^
+      /mnt/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/distutils/checks/cpu_avx512_clx.c:22:1: error: control reaches end of non-void function [-Werror=return-type]
+       }
+       ^
+      cc1: all warnings being treated as errors
+      
+      WARN: CCompilerOpt.feature_test[1563] : testing failed
+      INFO: CCompilerOpt.__init__[1803] : skip features (SSE SSE2 SSE3) since its part of baseline
+      INFO: CCompilerOpt.__init__[1807] : initialize targets groups
+      INFO: CCompilerOpt.__init__[1809] : parse target group simd_test
+      INFO: CCompilerOpt._parse_target_tokens[2020] : skip targets (ASIMD NEON VXE2 XOP VSX FMA4 VXE VSX4 AVX512_SKX VX VSX3 AVX512F VSX2) not part of baseline or dispatch-able features
+      INFO: CCompilerOpt._parse_policy_not_keepbase[2132] : skip baseline features (SSE2)
+      INFO: CCompilerOpt.generate_dispatch_header[2353] : generate CPU dispatch header: (build/src.linux-x86_64-3.10/numpy/distutils/include/npy_cpu_dispatch_config.h)
+      INFO: get_default_fcompiler: matching types: '['arm', 'gnu95', 'intel', 'lahey', 'pg', 'nv', 'absoft', 'nag', 'vast', 'compaq', 'intele', 'intelem', 'gnu', 'g95', 'pathf95', 'nagfor', 'fujitsu']'
+      INFO: customize ArmFlangCompiler
+      WARN: Could not locate executable armflang
+      INFO: customize Gnu95FCompiler
+      INFO: Found executable /usr/bin/gfortran
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler using build_ext
+      INFO: get_default_fcompiler: matching types: '['arm', 'gnu95', 'intel', 'lahey', 'pg', 'nv', 'absoft', 'nag', 'vast', 'compaq', 'intele', 'intelem', 'gnu', 'g95', 'pathf95', 'nagfor', 'fujitsu']'
+      INFO: customize ArmFlangCompiler
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler
+      INFO: customize Gnu95FCompiler using build_ext
+      INFO: building '.fchl.ffchl_module' extension
+      INFO: compiling C sources
+      INFO: C compiler: gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC
+      
+      creating build/temp.linux-x86_64-cpython-310/build
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/fchl
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10
+      creating build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl
+      INFO: compile options: '-Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl -I/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c'
+      extra options: '-O3 -fopenmp -m64 -march=native -fPIC -Wno-maybe-uninitialized -Wno-unused-function -Wno-cpp -msse -msse2 -msse3'
+      INFO: gcc: build/src.linux-x86_64-3.10/fchl/ffchl_modulemodule.cINFO: gcc: build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c
+      
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c: In function ‘find_first_negative_dimension’:
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c:707:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+           for (int i = 0; i < rank; ++i) {
+           ^
+      build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c:707:5: note: use option -std=c99 or -std=gnu99 to compile your code
+      error: Command "gcc -pthread -B /scratch/meliao/FCHL_conda_env/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -O2 -isystem /scratch/meliao/FCHL_conda_env/include -fPIC -Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl -I/scratch/meliao/FCHL_conda_env/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/scratch/meliao/FCHL_conda_env/include/python3.10 -c build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.c -o build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.o -MMD -MF build/temp.linux-x86_64-cpython-310/build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fchl/fortranobject.o.d -O3 -fopenmp -m64 -march=native -fPIC -Wno-maybe-uninitialized -Wno-unused-function -Wno-cpp -msse -msse2 -msse3" failed with exit status 1
+      INFO:
+      ########### EXT COMPILER OPTIMIZATION ###########
+      INFO: Platform      :
+        Architecture: x64
+        Compiler    : gcc
+      
+      CPU baseline  :
+        Requested   : 'min'
+        Enabled     : SSE SSE2 SSE3
+        Flags       : -msse -msse2 -msse3
+        Extra checks: none
+      
+      CPU dispatch  :
+        Requested   : 'max -xop -fma4'
+        Enabled     : SSSE3 SSE41 POPCNT SSE42 AVX F16C FMA3 AVX2
+        Generated   : none
+      INFO: CCompilerOpt.cache_flush[857] : write cache to path -> /tmp/pip-req-build-mmptkev3/build/temp.linux-x86_64-cpython-310/ccompiler_opt_cache_ext.py
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: legacy-install-failure
+
+× Encountered error while trying to install package.
+╰─> qml
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for output from the failure.
